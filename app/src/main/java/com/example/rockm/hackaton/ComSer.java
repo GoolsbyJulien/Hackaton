@@ -45,6 +45,7 @@ public class ComSer extends AppCompatActivity   implements NavigationView.OnNavi
             @Override
             public void onItemClick(android.widget.AdapterView<?> parent,
                                     View view, int position, long id) {
+
                 Toast.makeText(getApplicationContext(),
                         comJobs.get(position).getDescription(), Toast.LENGTH_LONG).show();
             }

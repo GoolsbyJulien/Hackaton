@@ -89,7 +89,7 @@ public class AdapterViewCustom extends BaseAdapter {
 
         viewHolder.name.setText(pairs.get(position).getName());
         viewHolder.number.setText(pairs.get(position).getPhone());
-        viewHolder.describe.setText(pairs.get(position).getDescription());
+        viewHolder.describe.setText(pairs.get(position).getName());
         viewHolder.web.setText(pairs.get(position).getLocation());
         viewHolder.level.setText(position +1 + "");
 
