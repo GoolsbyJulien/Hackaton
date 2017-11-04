@@ -17,7 +17,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+public static String name;
+   public String updating_title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,12 @@ public class MainActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(LoginActivity.USERNAME);
+        name = message;
+         updating_title = getString(R.string.name, message);
+
+        // Capture the layout's TextView and set the string as its text
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +45,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -59,6 +67,8 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        TextView e = (TextView) findViewById (R.id.uInput);
+        e.setText(updating_title);
         return true;
     }
 
@@ -83,17 +93,21 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.ComSer) {
 
-        } else if (id == R.id.nav_slideshow) {
+            Intent intent = new Intent(this, ComSer.class);
+            startActivity(intent);
+        } else if (id == R.id.Career) {
+            Intent intent = new Intent(this, Carrer.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.tut) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.fav) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.set) {
+
+        } else if (id == R.id.log) {
 
         }
 
