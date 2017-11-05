@@ -23,7 +23,8 @@ public class jobScreen extends AppCompatActivity {
 
           Intent intent = getIntent();
 
-        jobName.setText();
+        jobName.setText(intent.getStringExtra("Name"));
+        Des.setText(intent.getStringExtra("Describe"));
 
 
 
