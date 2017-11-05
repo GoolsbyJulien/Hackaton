@@ -39,9 +39,6 @@ public class jobScreen extends Activity {
             @Override
             public void onClick(View view) {
 
-                CheckBox c = findViewById(R.id.check);
-                if(Favoirtes.Fav.indexOf(j) != -1 && c.isActivated())
-                    Favoirtes.Fav.add(j);
                 finish();
             }
         });

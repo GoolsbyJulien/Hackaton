@@ -18,7 +18,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="98dp"
         android:layout_toRightOf="@+id/numberPicker1"
-        android:text="Cancel" />
+        android:text="Okay" />
 
     <Button
         android:id="@+id/button1"

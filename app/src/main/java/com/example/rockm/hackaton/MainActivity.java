@@ -48,17 +48,10 @@ public class MainActivity extends AppCompatActivity
 
         name = message;
         updating_title = getString(R.string.name, message);
-
+tv= findViewById(R.id.hour_conter);
         // Capture the layout's TextView and set the string as its text
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+       
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -100,7 +93,7 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.hour_conter) {
 
-
+        show();
             //
         }
 
@@ -149,7 +142,7 @@ public class MainActivity extends AppCompatActivity
 
         final Dialog d = new Dialog(MainActivity.this);
         d.setTitle("NumberPicker");
-        d.setContentView(R.layout.dialog);
+        d.setContentView(R.layout.hourcounter);
         Button b1 = (Button) d.findViewById(R.id.button1);
         Button b2 = (Button) d.findViewById(R.id.button2);
         final NumberPicker np = (NumberPicker) d.findViewById(R.id.numberPicker1);
@@ -157,21 +150,25 @@ public class MainActivity extends AppCompatActivity
         np.setMinValue(0);
         np.setWrapSelectorWheel(false);
         np.setOnValueChangedListener(this);
-        b1.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 tv.setText(String.valueOf(np.getValue()));
                 d.dismiss();
             }
         });
-        b2.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
+
+                tv.setText("Total Hours: " + String.valueOf(Integer.parseInt(tv.getText().toString().replace("Total Hours: ", "") ) + np.getValue()));
                 d.dismiss();
+
             }
         });
         d.show();
-
 
     }
 
