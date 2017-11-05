@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hackathon</string>
+    <string name="app_name">BigDog</string>
     <string name="name"> %s </string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -22,4 +22,5 @@
     </string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_job_screen">jobScreen</string>
+    <string name="title_activity_favoirtes">Favoirtes</string>
 </resources>

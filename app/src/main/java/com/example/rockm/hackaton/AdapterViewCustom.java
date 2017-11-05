@@ -94,8 +94,10 @@ public class AdapterViewCustom extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(context_1,jobScreen.class);
+                Bundle bundle = new Bundle();
 
-
+                bundle.putSerializable("Job", pairs.get(position));
+// To retrieve object in second Activity
                 i.putExtra("Name",pairs.get(position).getName());
                   i.putExtra("Describe",pairs.get(position).getDescription());
                   context_1.startActivity(i);

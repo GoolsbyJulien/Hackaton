@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class ComSer extends AppCompatActivity   implements NavigationView.OnNavigationItemSelectedListener {
     private double total_hours;
 
-    private ArrayList<Job> comJobs = new ArrayList<>();
+    public static ArrayList<Job> comJobs = new ArrayList<>();
 
     private ListView list;
 
@@ -103,7 +103,8 @@ public class ComSer extends AppCompatActivity   implements NavigationView.OnNavi
             startActivity(intent);
 
         } else if (id == R.id.tut) {
-
+            Intent intent = new Intent(this, Tutoring.class);
+            startActivity(intent);
         } else if (id == R.id.fav) {
 
         } else if (id == R.id.set) {

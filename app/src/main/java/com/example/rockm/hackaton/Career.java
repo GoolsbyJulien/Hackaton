@@ -19,7 +19,7 @@ import java.util.List;
 public class Career extends Activity implements AdapterView.OnItemClickListener {
     private double total_hours;
 
-    private ArrayList<Job> comJobs = new ArrayList<>();
+    public static ArrayList<Job> comJobs = new ArrayList<>();
 
     private ListView list;
 
@@ -59,32 +59,34 @@ public void open(Job j) {
         Toast.makeText(getApplicationContext(),
                 comJobs.get(position).getName(), Toast.LENGTH_LONG).show();
     }
+
+    private static boolean hasRan;
     public void createJobs() {
-
-        comJobs.add(new Job("McDonalds","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("Starbucks ","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Barista"));
-        comJobs.add(new Job("School","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Substitute teacher"));
-        comJobs.add(new Job("Pizza hut","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("McDonalds","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("Starbucks ","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Barista"));
-        comJobs.add(new Job("School","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Substitute teacher"));
-        comJobs.add(new Job("Pizza hut","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("McDonalds","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("Starbucks ","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Barista"));
-        comJobs.add(new Job("School","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Substitute teacher"));
-        comJobs.add(new Job("Pizza hut","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("McDonalds","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("Starbucks ","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Barista"));
-        comJobs.add(new Job("School","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Substitute teacher"));
-        comJobs.add(new Job("Pizza hut","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("McDonalds","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("Starbucks ","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Barista"));
-        comJobs.add(new Job("School","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Substitute teacher"));
-        comJobs.add(new Job("Pizza hut","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("McDonalds","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-        comJobs.add(new Job("Starbucks ","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Barista"));
-        comJobs.add(new Job("School","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Substitute teacher"));
-        comJobs.add(new Job("Pizza hut","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
-
-
+        if(!hasRan) {
+            comJobs.add(new Job("McDonalds", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("Starbucks ", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Barista"));
+            comJobs.add(new Job("School", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Substitute teacher"));
+            comJobs.add(new Job("Pizza hut", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("McDonalds", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("Starbucks ", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Barista"));
+            comJobs.add(new Job("School", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Substitute teacher"));
+            comJobs.add(new Job("Pizza hut", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("McDonalds", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("Starbucks ", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Barista"));
+            comJobs.add(new Job("School", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Substitute teacher"));
+            comJobs.add(new Job("Pizza hut", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("McDonalds", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("Starbucks ", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Barista"));
+            comJobs.add(new Job("School", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Substitute teacher"));
+            comJobs.add(new Job("Pizza hut", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("McDonalds", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("Starbucks ", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Barista"));
+            comJobs.add(new Job("School", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Substitute teacher"));
+            comJobs.add(new Job("Pizza hut", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("McDonalds", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+            comJobs.add(new Job("Starbucks ", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Barista"));
+            comJobs.add(new Job("School", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Substitute teacher"));
+            comJobs.add(new Job("Pizza hut", "29$ per hour", "Kansas city", "test@gmail.com", "111-111-111", "Manager"));
+hasRan = true;
+        }
     }}

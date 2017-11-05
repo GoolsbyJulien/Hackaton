@@ -32,12 +32,11 @@
         android:id="@+id/website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/phoneN"
-        android:layout_alignBottom="@+id/phoneN"
-        android:layout_marginLeft="60dp"
-        android:layout_marginStart="60dp"
-        android:layout_toEndOf="@+id/phoneN"
-        android:layout_toRightOf="@+id/phoneN"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/textView6"
+        android:layout_toRightOf="@+id/textView6"
         android:text="TextView" />
 
     <TextView

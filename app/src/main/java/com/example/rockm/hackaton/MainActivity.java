@@ -122,13 +122,22 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.tut) {
+            Intent intent = new Intent(this, Tutoring.class);
 
+            startActivity(intent);
         } else if (id == R.id.fav) {
-
+            Intent intent = new Intent(this, Favoirtes.class);
+            startActivity(intent);
         } else if (id == R.id.set) {
 
         } else if (id == R.id.log) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        } else if(id == R.id.intern) {
 
+            Intent intent = new Intent(this, Internships.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

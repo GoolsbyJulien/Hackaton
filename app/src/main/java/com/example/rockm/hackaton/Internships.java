@@ -15,7 +15,7 @@ import java.util.List;
 public class Internships extends AppCompatActivity {
     private double total_hours;
 
-    private ArrayList<Job> comJobs = new ArrayList<>();
+    public static ArrayList<Job> comJobs = new ArrayList<>();
 
     private ListView list;
 
@@ -47,12 +47,18 @@ public class Internships extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-    }public void createJobs() {
+    }
+    public static boolean hasRan = false;
+    public void createJobs() {
+
+        if(!hasRan) {
         comJobs.add(new Job("Cerner " ,"6 hours a day", "Kansas city", "test@gmail.com","111-111-111" , "Slides at service"));
         comJobs.add(new Job("Motor Dealership ","5 hours a day, $12 an hour", "Kansas city", "test@gmail.com","111-111-111" , "Understudy"));
         comJobs.add(new Job("North Kansas City Schools "," 4 hours a day", "Kansas city", "test@gmail.com","111-111-111" , "Teacher assistant"));
         comJobs.add(new Job("Hospital ","3 hours a day", "Kansas city", "test@gmail.com","111-111-111" ,"Help with books"));
+hasRan = true;
 
+        }
 
 
 

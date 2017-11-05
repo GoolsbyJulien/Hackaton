@@ -1,10 +1,12 @@
 package com.example.rockm.hackaton;
 
+import java.io.Serializable;
+
 /**
  * Created by rockm on 11/4/2017.
  */
 
-public class Job {
+public class Job implements Serializable {
     public String getEmail() {
         return email;
     }
@@ -50,6 +52,7 @@ public class Job {
     private String money;
     private String location;
     private String email,phone;
+    private boolean isFav;
     public Job(String name, String money,String location,String email,String phone, String description) {
 
         this.name = name;
@@ -58,6 +61,15 @@ public class Job {
         this.money = money;
         this.phone = phone;
 
+    }
+
+    public void setIsFav(boolean isFav) {
+
+        this.isFav = isFav;
+    }
+    public  boolean getIsFav() {
+
+        return  isFav;
     }
     public String getName() {
 

@@ -16,7 +16,7 @@ public class Tutoring extends AppCompatActivity {
 
     private double total_hours;
 
-    private ArrayList<Job> comJobs = new ArrayList<>();
+    public static ArrayList<Job> comJobs = new ArrayList<>();
 
     private ListView list;
 
@@ -48,9 +48,16 @@ public class Tutoring extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-    }public void createJobs() {
+    }
+    public static boolean hasRan;
+    public void createJobs() {
+if(!hasRan) {
+    hasRan = true;
+comJobs.add(new Job("North Kansas City School ", "3 hours ", "Staley High School",   "staley@nkcschools.org",    "111-111-111","Teaching Kids to Program"));
+comJobs.add(new Job("North Kansas City School ", "4 hours ", "Northview Elementary", "northview@nkcschools.org", "111-111-111","Chess Club"));
+comJobs.add(new Job("North Kansas City School ", "3 hours ", "Northview Elementary", "northview@nkcschools.org", "111-111-111","Reading Club"));
 
-
+}
 
 
 
