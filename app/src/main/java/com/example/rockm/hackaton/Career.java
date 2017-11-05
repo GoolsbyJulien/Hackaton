@@ -16,7 +16,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Career extends Activity {
+public class Career extends Activity implements AdapterView.OnItemClickListener {
     private double total_hours;
 
     private ArrayList<Job> comJobs = new ArrayList<>();
@@ -33,23 +33,12 @@ public class Career extends Activity {
         createJobs();
 
 
-        AdapterView.OnItemClickListener  myListViewClicked;
+        list = (ListView) findViewById(R.id.listview);
 
-        final AdapterViewCustom adapter = new AdapterViewCustom(this, comJobs);
-        list = (ListView) findViewById(R.id.listVeiw);
-
+        AdapterViewCustom adapter = new AdapterViewCustom(this, comJobs);
         list.setAdapter(adapter);
 
-      myListViewClicked = new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Career.this, "Clicked at positon = " + position, Toast.LENGTH_SHORT).show();
-
-            }
-        };
-        list.setOnItemClickListener(  myListViewClicked );
-
+     //   list.setOnItemClickListener(this);
     }
 
 
@@ -65,9 +54,25 @@ public void open(Job j) {
 
     }
 
-
+    public void onItemClick(android.widget.AdapterView<?> parent,
+                            View view, int position, long id) {
+        Toast.makeText(getApplicationContext(),
+                comJobs.get(position).getName(), Toast.LENGTH_LONG).show();
+    }
     public void createJobs() {
 
+        comJobs.add(new Job("McDonalds","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
+        comJobs.add(new Job("Starbucks ","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Barista"));
+        comJobs.add(new Job("School","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Substitute teacher"));
+        comJobs.add(new Job("Pizza hut","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
+        comJobs.add(new Job("McDonalds","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
+        comJobs.add(new Job("Starbucks ","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Barista"));
+        comJobs.add(new Job("School","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Substitute teacher"));
+        comJobs.add(new Job("Pizza hut","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
+        comJobs.add(new Job("McDonalds","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
+        comJobs.add(new Job("Starbucks ","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Barista"));
+        comJobs.add(new Job("School","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Substitute teacher"));
+        comJobs.add(new Job("Pizza hut","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
         comJobs.add(new Job("McDonalds","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Manager"));
         comJobs.add(new Job("Starbucks ","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Barista"));
         comJobs.add(new Job("School","29$ per hour", "Kansas city", "test@gmail.com","111-111-111" ,"Substitute teacher"));

@@ -29,7 +29,7 @@ public class Internships extends AppCompatActivity {
         createJobs();
 
 
-        list = (ListView) findViewById(R.id.listVeiw);
+        list = (ListView) findViewById(R.id.listview);
 
         AdapterViewCustom adapter = new AdapterViewCustom(this, comJobs);
         list.setAdapter(adapter);

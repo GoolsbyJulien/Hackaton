@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clickable="true"
     android:orientation="horizontal">
 
 
@@ -65,9 +64,8 @@
         android:id="@+id/level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/describe"
-        android:layout_alignStart="@+id/describe"
-        android:layout_below="@+id/describe"
-        android:layout_marginTop="14dp"
+        android:layout_alignLeft="@+id/website"
+        android:layout_alignStart="@+id/website"
+        android:layout_below="@+id/website"
         android:text="TextView" />
 </RelativeLayout>

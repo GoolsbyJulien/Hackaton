@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
+
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -21,6 +22,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -37,6 +39,8 @@ public class AdapterViewCustom extends BaseAdapter {
                              ArrayList<Job> pairs) {
         context_1 = context;
         this.pairs = pairs;
+
+
     }
 
     @Override
@@ -57,7 +61,7 @@ public class AdapterViewCustom extends BaseAdapter {
 
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder = null;
 
         if (convertView == null) {
@@ -86,7 +90,17 @@ public class AdapterViewCustom extends BaseAdapter {
              * */
             viewHolder = (ViewHolder) convertView.getTag();
         }
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context_1,jobScreen.class);
 
+
+                i.putExtra("Name",pairs.get(position).getName());
+                  i.putExtra("Describe",pairs.get(position).getDescription());
+                  context_1.startActivity(i);
+
+            }});
         viewHolder.name.setText(pairs.get(position).getName());
         viewHolder.number.setText(pairs.get(position).getPhone());
         viewHolder.describe.setText(pairs.get(position).getName());

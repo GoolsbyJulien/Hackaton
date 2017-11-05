@@ -9,7 +9,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -28,27 +30,38 @@ public class ComSer extends AppCompatActivity   implements NavigationView.OnNavi
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.created);
+        setContentView(R.layout.created2);
         createJobs();
 
 
-        list = (ListView) findViewById(R.id.listVeiw);
+        list = (ListView) findViewById(R.id.listview);
 
         AdapterViewCustom adapter = new AdapterViewCustom(this, comJobs);
+       /* list.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(getApplicationContext(),
+                        "text", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });*/
+
         list.setAdapter(adapter);
 
-        list.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+      /*  list.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(android.widget.AdapterView<?> parent,
                                     View view, int position, long id) {
 
-                Toast.makeText(getApplicationContext(),
-                        comJobs.get(position).getDescription(), Toast.LENGTH_LONG).show();
-            }
-        });
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+            }
+        });*/
+
+
        /*
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

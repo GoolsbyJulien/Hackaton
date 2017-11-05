@@ -4,13 +4,10 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Career">
-
-
-
+    tools:context=".Internships">
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:focusableInTouchMode="false" />
+        android:layout_height="match_parent" />
+
 </LinearLayout>

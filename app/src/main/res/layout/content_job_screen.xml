@@ -18,21 +18,13 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/more_imfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="29dp" />
-
-    <TextView
         android:id="@+id/Des_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/job_title"
-        android:layout_marginTop="12dp"
+        android:layout_alignEnd="@+id/favoite"
+        android:layout_alignRight="@+id/favoite"
+        android:layout_below="@+id/favoite"
+        android:layout_marginTop="74dp"
         android:text="TextView" />
 
     <Button
@@ -51,10 +43,10 @@
         android:id="@+id/favoite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Des_box"
-        android:layout_marginTop="59dp"
-        android:layout_toEndOf="@+id/Des_box"
-        android:layout_toRightOf="@+id/Des_box"
+        android:layout_alignLeft="@+id/save_button1"
+        android:layout_alignStart="@+id/save_button1"
+        android:layout_below="@+id/job_title"
+        android:layout_marginTop="89dp"
         android:text="Favoite" />
 
 </RelativeLayout>
