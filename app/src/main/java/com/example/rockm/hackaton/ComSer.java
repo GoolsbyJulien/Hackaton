@@ -3,12 +3,9 @@ package com.example.rockm.hackaton;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -17,7 +14,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ComSer extends AppCompatActivity   implements NavigationView.OnNavigationItemSelectedListener {
     private double total_hours;
@@ -73,7 +69,7 @@ public class ComSer extends AppCompatActivity   implements NavigationView.OnNavi
         //Sweeping floors
 
         comJobs.add(new Job("Holy Family Church " ,"3 hours", "Kansas city", "test@gmail.com","111-111-111" , "Slides at service"));
-        comJobs.add(new Job("Kansas City Soup Kitchen ","5 hours", "Kansas city", "test@gmail.com","111-111-111" , "Give out soup"));
+        comJobs.add(new Job("Soup Kitchen ","5 hours", "Kansas city", "test@gmail.com","111-111-111" , "Give out soup"));
         comJobs.add(new Job("Staley High School "," 4 hour", "Kansas city", "test@gmail.com","111-111-111" , "Pick up trash"));
         comJobs.add(new Job("Sunrise Senior Living ","3 hours", "Kansas city", "test@gmail.com","111-111-111" ,"Visit with elderly"));
 
@@ -90,7 +86,7 @@ public class ComSer extends AppCompatActivity   implements NavigationView.OnNavi
             Intent intent = new Intent(this, ComSer.class);
             startActivity(intent);
         } else if (id == R.id.Career) {
-            Intent intent = new Intent(this, Carrer.class);
+            Intent intent = new Intent(this, Career.class);
             startActivity(intent);
 
         } else if (id == R.id.tut) {
